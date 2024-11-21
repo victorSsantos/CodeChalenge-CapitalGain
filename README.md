@@ -31,7 +31,7 @@ em logicas de negocio propostas no desafio.
      dotnet test --collect:"XPlat Code Coverage"
      ```
    Comando ira executar os testes e gerar relatorio em formato xml
-   e com porcetagens de cobertura de testes unitarios. Arqquivo pode
+   e com porcetagens de cobertura de testes unitarios. Arquivo pode
    ser encontrado no caminho **CapitalGains.Test\TestResults**
 	
 3. **Executando o projeto**:
