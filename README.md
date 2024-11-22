@@ -6,7 +6,8 @@ Solução para processamento e calculo da taxa de operações financeiras de com
 
 ## **Decisões Técnicas e Arquiteturais**
 
-A aplicação foi projetada com uma arquitetura modular e orientada a interfaces para facilitar a escalabilidade, a manutenção e o teste de unidades. 
+A aplicação foi projetada com uma arquitetura modular e orientada a interfaces, levando em consideração principios do SOLID, Clean Code e 
+Clean Architecture para facilitar a escalabilidade, manutenção e o teste unitarios.
 Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade
 de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
 Aqui estão algumas decisões técnicas que orientaram o design:
