@@ -1,6 +1,6 @@
 # **Capital Gains Application**
 
-Solução console desenvolvida em .NET 8 para processamento e calculo da taxa de operações financeiras de compra e venda de ações. A aplicação pode ser executada localmente ou em um contêiner Docker. Este guia fornece todas as instruções necessárias para compilar, executar e testar o projeto.
+Solução console para processamento e calculo da taxa de operações financeiras de compra e venda de ações. A aplicação pode ser executada localmente ou em um contêiner Docker. Este guia fornece todas as instruções necessárias para compilar, executar e testar o projeto.
 
 ---
 
