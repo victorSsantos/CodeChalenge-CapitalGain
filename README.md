@@ -4,7 +4,7 @@ Solução console desenvolvida em .NET 8 para processamento e calculo da taxa de
 
 ---
 
-## **Decisões técnicas e Arquiteturais**
+## **Decisões Técnicas e Arquiteturais**
 
 
 ---
