@@ -77,15 +77,15 @@ levando em consideração que o calculo da operação atual necessita do resulta
 
 ### **Análise das principais Classe**
 
-### 1. `OperationProcessor`
+**1. `OperationProcessor`**
 - **Função:** Coordena o fluxo da aplicação e processa as operações.
 - **Complexidade:** **O(M × N)**, pois lê e itera sobre todas as operações para cada linha.
 
-### 2. `OperationHandler`
+**2. `OperationHandler`**
 - **Função:** Manipula a lógica de compra e venda de ações, calculando o custo médio e as taxas.
 - **Complexidade:** **O(N)** por linha, já que cada operação é processada individualmente com operações constantes.
 
-### 3. `OperationConsole`
+**3. `OperationConsole`**
 - **Função:** Lê a entrada e escreve a saída dos dados.
 - **Complexidade:** **O(M × N)**, devido à desserialização e serialização de todas as operações.
 
