@@ -2,6 +2,20 @@
 
 Este repositório contém uma aplicação console desenvolvida em .NET 8 para processamento de operações financeiras de compra e venda. A aplicação pode ser executada localmente ou em um contêiner Docker. Este guia fornece todas as instruções necessárias para compilar, executar e testar o projeto.
 
+
+---
+
+## **Justificativa para o Uso de Frameworks e Bibliotecas**
+
+- **.NET 8**: Escolhido por possuir maior experiencia, e suporte a aplicações multiplataforma.
+- **Docker**: Escolhido pela facilidade para gerar build e execução da aplicação em qualquer sistema operacional.
+- **xUnit**: Framework de testes escolhido por sua simplicidade e popularidade na comunidade .NET, e onde possuo mais afinidade.
+- **Newtonsoft.Json**: Biblioteca amplamente utilizada para manipulação de objetos JSON.
+- **Coverlet.collector**: Biblioteca amplamente aceita na comunidasde .NET, de simples entendimento para analise de cobertura de testes.
+
+Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade
+de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
+
 ---
 
 ## **Pré-Requisitos de Sistema**
@@ -26,16 +40,7 @@ Antes de começar, certifique-se de que o ambiente está configurado corretament
     docker --version
     docker compose version
     ```
-    
----
-
-## **Justificativa para o Uso de Frameworks e Bibliotecas**
-
-- **.NET 8**: Escolhido por sua robustez, performance e suporte a aplicações multiplataforma.
-- **Docker**: Utilizado para criar um ambiente de execução padronizado, facilitando a distribuição e a execução da aplicação em qualquer sistema operacional.
-- **xUnit**: Framework de testes escolhido por sua simplicidade e popularidade na comunidade .NET.
-- **Newtonsoft.Json**: Biblioteca confiável e amplamente utilizada para manipulação de objetos JSON.
-
+  
 ---
 
 ## **Instruções para Compilar e Executar o Projeto**
