@@ -127,26 +127,26 @@ Antes de começar, certifique-se de que o ambiente está configurado corretament
 
 ### **1. Compilando o Projeto Localmente**
 
-1.1. Abra o terminal ou prompt de comando.
-1.2. Navegue até o diretório raiz do projeto (onde está o arquivo `.csproj`).
-1.3. Compile o projeto utilizando o seguinte comando:
+1. Abra o terminal ou prompt de comando.
+2. Navegue até o diretório raiz do projeto.
+3. Compile o projeto utilizando o seguinte comando:
 ```bash
 dotnet build
 ```
-1.4. Após a compilação, os binários serão gerados no diretório bin/Debug/net8.0.
+4. Após a compilação, os binários serão gerados no diretório bin/Debug/net8.0.
 
 ### **2. Subindo a Imagem do Projeto para o Docker**
 
-2.1. Certifique-se de estar no diretório raiz da aplicação, onde está localizado o arquivo Dockerfile e/ou docker-compose.yml.
-2.2. Garantir que a porta 8080 esteja liberada.
-2.3. Suba a aplicação no Docker utilizando o comando abaixo:
+1. Certifique-se de estar no diretório raiz da aplicação, onde está localizado o arquivo Dockerfile e/ou docker-compose.yml.
+2. Garantir que a porta 8080 esteja liberada.
+3. Suba a aplicação no Docker utilizando o comando abaixo:
 ```bash
 docker compose up --build
 ```
 
 ### **3. Executando a Aplicação para Processar o Arquivo de Operações**
 
-3.1. Certifique-se de que o arquivo de entrada input.txt está no mesmo diretório onde o comando será executado.
+1. Certifique-se de que o arquivo de entrada input.txt está no mesmo diretório onde o comando será executado.
 - Exemplo do conteúdo esperado em input.txt:
 ```text
 [{"operation":"buy","unit-cost":20.00,"quantity":50},{"operation":"sell","unit-cost":20.00,"quantity":50}]
@@ -154,11 +154,11 @@ docker compose up --build
 [{"operation":"buy","unit-cost":15.00,"quantity":200},{"operation":"sell","unit-cost":10.00,"quantity":100}]
 
 ```
-3.2. Execute o seguinte comando no terminal para rodar a aplicação no Docker:
+2. Execute o seguinte comando no terminal para rodar a aplicação no Docker:
 ```bash
 docker run --rm -i capitalgains-server ./capital-gains < input.txt
 ```
-3.3. A saída será exibida diretamente no terminal, processando as operações contidas no arquivo input.txt.
+3. A saída será exibida diretamente no terminal, processando as operações contidas no arquivo input.txt.
 - Exemplo de saida esperada para cada linha do input.txt:
 ```text
 [{"tax":0.00},{"tax":80000.00},{"tax":0.00},{"tax":60000.00}]
@@ -170,20 +170,20 @@ docker run --rm -i capitalgains-server ./capital-gains < input.txt
 
 ### **1. Executando testes unitarios**
 
-1.1. Navegue até o diretório raiz do projeto.
-1.2 .Utilize o seguinte comando para executar os testes:
+1. Navegue até o diretório raiz do projeto.
+2. Utilize o seguinte comando para executar os testes:
 ```bash
 dotnet test
 ```
-1.3. O framework xUnit será utilizado para executar os testes configurados no projeto. Após a execução, você verá os resultados diretamente no terminal.
+3. O framework xUnit será utilizado para executar os testes configurados no projeto. Após a execução, você verá os resultados diretamente no terminal.
 
 ### **2. Executando testes unitarios e gerando relatorio de cobertura**
 
-2.1. Navegue até o diretório raiz do projeto.
-2.2 .Utilize o seguinte comando para executar os testes e gerar o relatorio:
+1. Navegue até o diretório raiz do projeto.
+2. Utilize o seguinte comando para executar os testes e gerar o relatorio:
 ```bash
 dotnet test --collect:"XPlat Code Coverage"
 ```
-2.3. A biblioteca xUnit será utilizado para executar os testes configurados no projeto, e o Coverlet.collections sera responsavel por gerar o arquivo de cobertura com extensão .xml.
+3. A biblioteca xUnit será utilizado para executar os testes configurados no projeto, e o Coverlet.collections sera responsavel por gerar o arquivo de cobertura com extensão .xml.
 Arquivo sera gerado no diretorio **CapitalGains.Test/TestResult**.
 
