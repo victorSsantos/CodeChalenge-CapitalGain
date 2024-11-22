@@ -49,3 +49,11 @@ em logicas de negocio propostas no desafio.
      ```bash
      docker compose up --build
      ```
+     
+4. **Executando aplicação para leitura do arquivo de operações**:
+    - No diretorio raiz da aplicação.
+    - Copie o arquivo input.txt para o diretorio raiz.
+    - Execute o comando:
+     ```bash
+     docker run --rm -i capitalgains-server ./capital-gains < input.txt
+     ```     
