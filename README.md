@@ -6,10 +6,12 @@ Solução console desenvolvida em .NET 8 para processamento e calculo da taxa de
 
 ## **Decisões Técnicas e Arquiteturais**
 
+A aplicação foi projetada com uma arquitetura modular e orientada a interfaces para facilitar a escalabilidade, a manutenção e o teste de unidades. 
+Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade
+de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
+Aqui estão algumas decisões técnicas que orientaram o design:
 
----
-
-## **Justificativa para o Uso de Frameworks e Bibliotecas**
+### **1. Frameworks e Bibliotecas**
 
 - **.NET 8**: Escolhido por possuir maior experiencia, e suporte a aplicações multiplataforma.
 - **Docker**: Escolhido pela facilidade para gerar build e execução da aplicação em qualquer sistema operacional.
@@ -17,8 +19,50 @@ Solução console desenvolvida em .NET 8 para processamento e calculo da taxa de
 - **Newtonsoft.Json**: Biblioteca amplamente utilizada para manipulação de objetos JSON.
 - **Coverlet.collector**: Biblioteca amplamente aceita na comunidasde .NET, de simples entendimento para analise de cobertura de testes.
 
-Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade
-de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
+### **2. Organização por Pacotes**
+A aplicação foi dividida em pacotes para garantir uma separação clara de responsabilidades:
+- **CapitalGains.Processor**: Responsável por iniciar a aplicação e coordenar os processos principais.
+- **CapitalGains.Application**: Contém os serviços, DTOs e lógica de negócio.
+- **CapitalGains.Core**: Define as entidades principais e as interfaces que descrevem o comportamento dos serviços.
+- **CapitalGains.Test**: Contém testes automatizados para garantir a integridade e confiabilidade do sistema.
+
+### **3. Arquitetura Baseada em Interfaces**
+- Utilizamos interfaces para abstrair comportamentos, permitindo fácil substituição e testes independentes das implementações.
+
+### **4. DTOs para Abstração de Dados**
+- Classes `OperationInput` e `OperationOutput` foram introduzidas para encapsular os dados de entrada e saída.
+
+### **5. Lógica de Negócios**
+- A lógica de cálculos para compra e venda de ações está concentrada na classe `OperationHandler`, garantindo clareza e encapsulamento.
+
+---
+
+## **Estrutura da Aplicação**
+
+### **Pacote: CapitalGains.Processor**
+- **Program.cs**: Classe principal que inicia a aplicação e configura as dependências.
+- **OperationProcessor.cs**: Coordena o fluxo da aplicação, processando as operações e gerenciando as entradas e saídas.
+
+### **Pacote: CapitalGains.Application**
+- **DTOS**:
+  - `OperationInput`: Representa uma operação recebida no input.
+  - `OperationOutput`: Representa o formato de saída com as taxas calculadas.
+- **Serviços**:
+  - `OperationHandler`: Implementação da lógica de compra e venda.
+  - `OperationConsole`: Implementação de entrada e saída pelo console.
+
+### **Pacote: CapitalGains.Core**
+- **Entities**:
+  - `Operation`: Representa uma operação de compra ou venda.
+- **Enums**:
+  - `OperationType`: Define os tipos de operação (`buy` ou `sell`).
+- **Interfaces**:
+  - `IOperationConsole`: Define métodos para entrada e saída de dados via console.
+  - `IOperationHandler`: Define métodos para lidar com operações de compra e venda.
+  - `IOperationProcessor`: Define o método de execução do processo principal.
+
+### **Pacote: CapitalGains.Test**
+- Inclui testes unitários para validar cada funcionalidade da aplicação.
 
 ---
 
