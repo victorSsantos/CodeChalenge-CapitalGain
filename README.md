@@ -22,7 +22,7 @@ em logicas de negocio propostas no desafio.
      ```
     Comando ira executar os testes unitarios do projeto.
 
-2. **executando os testes e gerando relatorio de cobertura de testes**
+2. **Executando os testes e gerando relatorio de cobertura de testes**
     - Abra o terminal ou prompt de comando no diretorio raiz do projeto.
     - Execute o comando:
      ```
@@ -46,6 +46,6 @@ em logicas de negocio propostas no desafio.
 3. **Subindo imagem do projeto para o Docker**:
     - Permanessa no diretorio raiz da aplicação.
     - Execute o comando:
-	 ```bash
+     ```bash
      docker compose up --build
      ```
