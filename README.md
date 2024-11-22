@@ -4,9 +4,10 @@
 
 A solução foi construída utilizando as seguintes bibliotecas e frameworks:
 
-- **xUnit**: Foi utilizado como framework de testes unitários devido à sua simplicidade para implementação e relaização dos testes.
-- **coverlet.collector**: Esse framework foi utilizado para analise de cobertura de testes da solução, devido simplicidade para execução e geração de relatorio para analise. 
-- **Newtonsoft.Json**: Framework escolhido para lidar com a serialização e desserialização de objetos JSON devido à sua simplicidade e grande utilização na comunidade .NET.
+- **xUnit**: Foi utilizado como framework de testes unitários devido à sua simplicidade e felixidade para implementação e realização dos testes, o mesmo ja possui templates no Visual Studio.
+- **coverlet.collector**: Esse framework foi utilizado para analise de cobertura de testes da solução, devido simplicidade para execução e geração de relatorio para analise.
+  Xml gerado com porcentagens de cobertura é de facil entendimento e grande auxilio para verificar pontos que necessitam de antenção. 
+- **Newtonsoft.Json**: Framework escolhido para lidar com a serialização e desserialização de objetos JSON de forma mais simples e objetiva. É altamente utilizado na comunidade .NET.
 
 Essas bibliotecas e frameworks foram escolhidos por sua simplicidade e integração com o .NET, garantem uma estrutura de código mais limpa e fácil de testar. Sem interferir
 em logicas de negocio propostas no desafio.
