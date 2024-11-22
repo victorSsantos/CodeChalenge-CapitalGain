@@ -61,11 +61,10 @@ docker compose up --build
 ### **3. Executando a Aplicação para Processar o Arquivo de Operações**
 
 1. Certifique-se de que o arquivo de entrada input.txt está no mesmo diretório onde o comando será executado.
-
-  -Exemplo do conteúdo esperado em input.txt:
-   ```json
-   [{"operation":"buy","unit-cost":10.0,"quantity":100}]
-   ```
+- Exemplo do conteúdo esperado em input.txt:
+```json
+[{"operation":"buy","unit-cost":10.0,"quantity":100}]
+```
 2. Execute o seguinte comando no terminal para rodar a aplicação no Docker:
 ```bash
 docker run --rm -i capitalgains-server ./capital-gains < input.txt
