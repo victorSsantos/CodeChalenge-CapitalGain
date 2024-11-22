@@ -73,4 +73,8 @@ docker compose up --build
 docker run --rm -i capitalgains-server ./capital-gains < input.txt
 ```
 3. A saída será exibida diretamente no terminal, processando as operações contidas no arquivo input.txt.
+- Exemplo de saida esperada para cada linha do input.txt:
+```text
+[{"tax":0.00},{"tax":80000.00},{"tax":0.00},{"tax":60000.00}]
+```
 
