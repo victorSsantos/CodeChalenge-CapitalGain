@@ -138,7 +138,8 @@ dotnet build
 ### **2. Subindo a Imagem do Projeto para o Docker**
 
 2.1. Certifique-se de estar no diretório raiz da aplicação, onde está localizado o arquivo Dockerfile e/ou docker-compose.yml.
-2.2. Suba a aplicação no Docker utilizando o comando abaixo:
+2.2. Garantir que a porta 8080 esteja liberada.
+2.3. Suba a aplicação no Docker utilizando o comando abaixo:
 ```bash
 docker compose up --build
 ```
