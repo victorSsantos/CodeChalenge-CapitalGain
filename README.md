@@ -11,31 +11,40 @@ A solução foi construída utilizando as seguintes bibliotecas e frameworks:
 Essas bibliotecas e frameworks foram escolhidos por sua simplicidade e integração com o .NET, garantem uma estrutura de código mais limpa e fácil de testar. Sem interferir
 em logicas de negocio propostas no desafio.
 
-## Instruções para compilar e executar o projeto
+## Instruções para Testar o projeto e gerar Relatorio de cobertura
 
-1. **Pré-requisitos**: Certifique-se de ter o **.NET SDK** instalado em sua máquina. Você pode obter a versão mais recente [aqui](https://dotnet.microsoft.com/download).
-
-2. **Compilando o projeto**:
-   - Abra o terminal ou prompt de comando.
-   - Navegue até o diretório do projeto.
-   - Execute o comando:
-     ```bash
-     dotnet build
+1. **Executando apenas os testes**
+    - Abra o terminal ou prompt de comando no diretorio raiz do projeto.
+    - Execute o comando:
      ```
-   Esse comando irá compilar o projeto e gerar os binários necessários.
+     dotnet test
+     ```
+    Comando ira executar os testes unitarios do projeto.
 
-3. **Executando testes e gerando relatorio de cobertura**
-   - Abra o terminal ou prompt de comando no diretorio raiz do projeto.
-   - Execute o comando:
+2. **executando os testes e gerando relatorio de cobertura de testes**
+    - Abra o terminal ou prompt de comando no diretorio raiz do projeto.
+    - Execute o comando:
      ```
      dotnet test --collect:"XPlat Code Coverage"
      ```
-   Comando ira executar os testes e gerar relatorio em formato xml
-   e com porcetagens de cobertura de testes unitarios. Arquivo pode
-   ser encontrado no caminho **CapitalGains.Test\TestResults**
+    Comando ira executar os testes e gerar relatorio em formato xml
+    com porcetagem de cobertura de testes unitarios.
+
+## Instruções para compilar e executar o projeto
+
+1. **Pré-requisitos**: Certifique-se de ter o **DOCKER** instalado em sua máquina.
+
+2. **Compilando o projeto**:
+    - Abra o terminal ou prompt de comando.
+    - Navegue até o diretório do projeto.
+    - Execute o comando:
+     ```bash
+     dotnet build
+     ```
 	
-3. **Executando o projeto**:
-   Para executar a aplicação, utilize o comando:
-   ```bash
-   dotnet run
-   ```
+3. **Subindo imagem do projeto para o Docker**:
+    - Permanessa no diretorio raiz da aplicação.
+    - Execute o comando:
+	 ```bash
+     docker compose up --build
+     ```
