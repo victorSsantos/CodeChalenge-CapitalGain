@@ -8,6 +8,10 @@ Este repositório contém uma aplicação console desenvolvida em .NET 8 para pr
 
 Antes de começar, certifique-se de que o ambiente está configurado corretamente. Você precisará das seguintes ferramentas instaladas:
 
+- **Acesso ao terminal ou prompt de comando**  
+  - No Linux/MacOS, utilize o terminal padrão.  
+  - No Windows, pode usar o PowerShell ou CMD.
+
 - **.NET SDK 8.0 ou superior**  
   - Faça o download e instale a partir do site oficial da Microsoft: [Download .NET SDK](https://dotnet.microsoft.com/download).  
   - Verifique se está instalado corretamente executando no terminal:
@@ -17,16 +21,12 @@ Antes de começar, certifique-se de que o ambiente está configurado corretament
 
 - **Docker e Docker Compose**  
   - Faça o download e instale a partir do site oficial do Docker: [Download Docker](https://www.docker.com/products/docker-desktop).  
-  - Certifique-se de que o Docker está funcionando executando:
+  - Verifique se está instalado corretamente executando no terminal:
     ```bash
     docker --version
     docker compose version
     ```
-
-- **Acesso ao terminal ou prompt de comando**  
-  - No Linux/MacOS, utilize o terminal padrão.  
-  - No Windows, pode usar o PowerShell ou CMD.
-
+    
 ---
 
 ## **Justificativa para o Uso de Frameworks e Bibliotecas**
