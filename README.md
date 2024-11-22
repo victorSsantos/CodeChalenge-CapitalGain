@@ -29,17 +29,17 @@ Antes de começar, certifique-se de que o ambiente está configurado corretament
 - **.NET SDK 8.0 ou superior**  
   - Faça o download e instale a partir do site oficial da Microsoft: [Download .NET SDK](https://dotnet.microsoft.com/download).  
   - Verifique se está instalado corretamente executando no terminal:
-    ```bash
-    dotnet --version
-    ```
+  ```bash
+  dotnet --version
+  ```
 
 - **Docker e Docker Compose**  
   - Faça o download e instale a partir do site oficial do Docker: [Download Docker](https://www.docker.com/products/docker-desktop).  
   - Verifique se está instalado corretamente executando no terminal:
-    ```bash
-    docker --version
-    docker compose version
-    ```
+  ```bash
+  docker --version
+  docker compose version
+   ```
   
 ---
 
@@ -50,9 +50,9 @@ Antes de começar, certifique-se de que o ambiente está configurado corretament
 1. Abra o terminal ou prompt de comando.
 2. Navegue até o diretório raiz do projeto (onde está o arquivo `.csproj`).
 3. Compile o projeto utilizando o seguinte comando:
-   ```bash
-   dotnet build
-   ```
+```bash
+dotnet build
+```
 4.Após a compilação, os binários serão gerados no diretório bin/Debug/net8.0.
 
 ### **2. Subindo a Imagem do Projeto para o Docker**
