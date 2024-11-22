@@ -66,6 +66,31 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
+## **Análise de Complexidade (Big O)
+
+A complexidade geral da solução é **O(M × N)**, onde:
+- **M** é o número de linhas de operações no input.
+- **N** é o número de operações por linha.
+
+Isso ocorre porque o programa percorre cada linha e, em cada linha, processa todas as operações, onde é necessario tal comportamento
+levando em consideração que o calculo da operação atual necessita do resultado da operação anterior.
+
+### **Análise das principais Classe**
+
+### 1. `OperationProcessor`
+- **Função:** Coordena o fluxo da aplicação e processa as operações.
+- **Complexidade:** **O(M × N)**, pois lê e itera sobre todas as operações para cada linha.
+
+### 2. `OperationHandler`
+- **Função:** Manipula a lógica de compra e venda de ações, calculando o custo médio e as taxas.
+- **Complexidade:** **O(N)** por linha, já que cada operação é processada individualmente com operações constantes.
+
+### 3. `OperationConsole`
+- **Função:** Lê a entrada e escreve a saída dos dados.
+- **Complexidade:** **O(M × N)**, devido à desserialização e serialização de todas as operações.
+
+---
+
 ## **Pré-Requisitos de Sistema**
 
 Antes de começar, certifique-se de que o ambiente está configurado corretamente. Você precisará das seguintes ferramentas instaladas:
