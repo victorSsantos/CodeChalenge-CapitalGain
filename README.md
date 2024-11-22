@@ -1,4 +1,4 @@
-# **Capital Gains Application**
+# **Code Challenge - Capital Gains**
 
 Solução para processamento e calculo da taxa de operações financeiras de compra e venda de ações. A aplicação pode ser executada localmente ou em um contêiner Docker. Este guia fornece todas as instruções necessárias para compilar, executar e testar o projeto.
 
