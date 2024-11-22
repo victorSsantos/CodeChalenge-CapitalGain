@@ -75,7 +75,7 @@ A complexidade geral da solução é **O(M × N)**, onde:
 Isso ocorre porque o programa percorre cada linha e, em cada linha, processa todas as operações, onde é necessario tal comportamento
 levando em consideração que o calculo da operação atual necessita do resultado da operação anterior.
 
-### **Análise das principais Classe**
+### **Análise das principais Classes**
 
 **1. `OperationProcessor`**
 - **Função:** Coordena o fluxo da aplicação e processa as operações.
