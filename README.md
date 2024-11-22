@@ -66,7 +66,7 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
-## **Análise de Complexidade (Big O)
+## **Análise de Complexidade (Big O)**
 
 A complexidade geral da solução é **O(M × N)**, onde:
 - **M** é o número de linhas de operações no input.
