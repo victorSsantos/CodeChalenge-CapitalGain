@@ -83,3 +83,26 @@ docker run --rm -i capitalgains-server ./capital-gains < input.txt
 [{"tax":0.00},{"tax":80000.00},{"tax":0.00},{"tax":60000.00}]
 ```
 
+---
+
+## **Instruções para Executar os Testes**
+
+### **1. Executando testes unitarios**
+
+1. Navegue até o diretório raiz do projeto.
+2 .Utilize o seguinte comando para executar os testes:
+```bash
+dotnet test
+```
+3. O framework xUnit será utilizado para executar os testes configurados no projeto. Após a execução, você verá os resultados diretamente no terminal.
+
+### **2. Executando testes unitarios e gerando relatorio de cobertura**
+
+1. Navegue até o diretório raiz do projeto.
+2 .Utilize o seguinte comando para executar os testes e gerar o relatorio:
+```bash
+dotnet test --collect:"XPlat Code Coverage"
+```
+3. A biblioteca xUnit será utilizado para executar os testes configurados no projeto, e o Coverlet.collections sera responsavel por gerar o arquivo de cobertura com extensão .xml.
+Arquivo sera gerado no diretorio **CapitalGains.Test/TestResult**.
+
