@@ -67,6 +67,12 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
+## **Fluxo de Execução**
+
+![Fluxo de Execução](./assets/execution_flow.png)
+
+---
+
 ## **Análise de Complexidade (Big O)**
 
 A complexidade geral da solução é **O(M × N)**, onde:
