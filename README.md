@@ -63,9 +63,10 @@ docker compose up --build
 1. Certifique-se de que o arquivo de entrada input.txt está no mesmo diretório onde o comando será executado.
 - Exemplo do conteúdo esperado em input.txt:
 ```text
-[{"operation":"buy","unit-cost":10.0,"quantity":100}]
-[{"operation":"sell","unit-cost":15.0,"quantity":50}]
-[{"operation":"buy","unit-cost":10.0,"quantity":50}]
+[{"operation":"buy","unit-cost":20.0,"quantity":50},{"operation":"sell","unit-cost":20.0,"quantity":50}]
+[{"operation":"buy","unit-cost":10.0,"quantity":100},{"operation":"sell","unit-cost":15.0,"quantity":50},{"operation":"buy","unit-cost":10.0,"quantity":50}]
+[{"operation":"buy","unit-cost":15.0,"quantity":200},{"operation":"sell","unit-cost":10.0,"quantity":100}]
+
 ```
 2. Execute o seguinte comando no terminal para rodar a aplicação no Docker:
 ```bash
