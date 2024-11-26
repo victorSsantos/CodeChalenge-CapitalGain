@@ -70,13 +70,13 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
-## **Diagrama de classes**
+## **Diagrama de Classes**
 
 ![Diagrama de Classes](./assets/class_diagram.png)
 
 ---
 
-## **Diagrama de atividades**
+## **Diagrama de Atividades**
 
 ![Diagrama de Atividades](./assets/activity__diagram.png)
 
