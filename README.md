@@ -76,6 +76,12 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
+## **Diagrama de atividades**
+
+![Diagrama de Atividades](./assets/activity_diagram.png)
+
+---
+
 ## **Fluxo de Execução**
 
 ![Fluxo de Execução](./assets/execution_flow.png)
