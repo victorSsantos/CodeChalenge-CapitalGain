@@ -8,7 +8,9 @@ Solução para processamento e calculo da taxa de operações financeiras de com
 
 A aplicação foi projetada com uma arquitetura modular e orientada a interfaces, levando em consideração principios do SOLID, Clean Code e Clean Architecture para facilitar a escalabilidade, manutenção e o teste unitarios.
 A principal estrutura de dados utilizada para manipulação dos dados de entrada foi a Lista, devido à sua flexibilidade e facilidade nas operações de adição de objetos. 
+
 Como não há um valor fixo para o tamanho das linhas nem para a quantidade de linhas, foi necessário escolher uma estrutura que proporcionasse essa liberdade, ao mesmo tempo em que garantisse a ordem dos elementos, graças à sua natureza encadeada, permitindo a ligação de cada objeto ao próximo na sequência.
+
 Tambem foi utilizado programação assincrona para ganho de performasse em cenarios de arquivos com muitas linhas.
 Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
 Aqui estão algumas decisões técnicas que orientaram o design:
