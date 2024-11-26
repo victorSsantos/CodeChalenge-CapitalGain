@@ -68,6 +68,12 @@ A aplicação foi dividida em pacotes para garantir uma separação clara de res
 
 ---
 
+## **Diagrama de classes**
+
+![Diagrama de Classes](./assets/class_diagram.png)
+
+---
+
 ## **Fluxo de Execução**
 
 ![Fluxo de Execução](./assets/execution_flow.png)
