@@ -6,10 +6,11 @@ Solução para processamento e calculo da taxa de operações financeiras de com
 
 ## **Decisões Técnicas e Arquiteturais**
 
-A aplicação foi projetada com uma arquitetura modular e orientada a interfaces, levando em consideração principios do SOLID, Clean Code e 
-Clean Architecture para facilitar a escalabilidade, manutenção e o teste unitarios.
-Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade
-de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
+A aplicação foi projetada com uma arquitetura modular e orientada a interfaces, levando em consideração principios do SOLID, Clean Code e Clean Architecture para facilitar a escalabilidade, manutenção e o teste unitarios.
+A principal estrutura de dados utilizada para manipulação dos dados de entrada foi a Lista, devido à sua flexibilidade e facilidade nas operações de adição de objetos. 
+Como não há um valor fixo para o tamanho das linhas nem para a quantidade de linhas, foi necessário escolher uma estrutura que proporcionasse essa liberdade, ao mesmo tempo em que garantisse a ordem dos elementos, graças à sua natureza encadeada, permitindo a ligação de cada objeto ao próximo na sequência.
+Tambem foi utilizado programação assincrona para ganho de performasse em cenarios de arquivos com muitas linhas.
+Bibiliotecas e Frameworks em geral foram escolhidos levando em consideração três pontos, familiaridade com a tecnologia, facilidade de utilização e abstração de alguns processos que acredito não entrarem na avaliação da logica de raciocinio da solução em si.
 Aqui estão algumas decisões técnicas que orientaram o design:
 
 ### **1. Frameworks e Bibliotecas**
@@ -79,14 +80,13 @@ A complexidade geral da solução é **O(M × N)**, onde:
 - **M** é o número de linhas de operações no input.
 - **N** é o número de operações por linha.
 
-Isso ocorre porque o programa percorre cada linha e, em cada linha, processa todas as operações, onde é necessario tal comportamento
-levando em consideração que o calculo da operação atual necessita do resultado da operação anterior.
+Isso ocorre porque o programa percorre cada linha e, em cada linha, processa todas as operações, onde é necessario tal comportamento levando em consideração que o calculo da operação atual necessita do resultado da operação anterior.
 
 ### **Análise das principais Classes**
 
 **1. `OperationProcessor`**
 - **Função:** Coordena o fluxo da aplicação e processa as operações.
-- **Complexidade:** **O(M × N)**, pois lê e itera sobre todas as operações para cada linha.
+- **Complexidade:** **O(N × M / P)**, pois lê e itera sobre todas as operações para cada linha, porem executa cada linha em paralelo a depender da quantidade de threads disponiveis.
 
 **2. `OperationHandler`**
 - **Função:** Manipula a lógica de compra e venda de ações, calculando o custo médio e as taxas.
